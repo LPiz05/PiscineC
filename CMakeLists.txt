@@ -17,7 +17,7 @@ LINK_DIRECTORIES(${GTK3_LIBRARY_DIRS})
 ADD_DEFINITIONS(${GTK3_CFLAGS_OTHER})
 
 # Add an executable compiled from hello.c
-add_executable(PiscineC main.c)
+add_executable(PiscineC main.c generate.h generate.c compare.h compare.c)
 
 # Link the target to the GTK+ libraries
 TARGET_LINK_LIBRARIES(PiscineC ${GTK3_LIBRARIES})

@@ -110,6 +110,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/tmp/tmp.Jh96LgNawa/compare.c">
+			<Option target="PiscineC"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.Jh96LgNawa/compare.h">
+			<Option target="PiscineC"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.Jh96LgNawa/generate.c">
+			<Option target="PiscineC"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.Jh96LgNawa/generate.h">
+			<Option target="PiscineC"/>
+		</Unit>
 		<Unit filename="/tmp/tmp.Jh96LgNawa/main.c">
 			<Option target="PiscineC"/>
 		</Unit>

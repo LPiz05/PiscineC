@@ -123,6 +123,60 @@ PiscineC/fast:
 	$(MAKE) -f CMakeFiles/PiscineC.dir/build.make CMakeFiles/PiscineC.dir/build
 .PHONY : PiscineC/fast
 
+compare.o: compare.c.o
+
+.PHONY : compare.o
+
+# target to build an object file
+compare.c.o:
+	$(MAKE) -f CMakeFiles/PiscineC.dir/build.make CMakeFiles/PiscineC.dir/compare.c.o
+.PHONY : compare.c.o
+
+compare.i: compare.c.i
+
+.PHONY : compare.i
+
+# target to preprocess a source file
+compare.c.i:
+	$(MAKE) -f CMakeFiles/PiscineC.dir/build.make CMakeFiles/PiscineC.dir/compare.c.i
+.PHONY : compare.c.i
+
+compare.s: compare.c.s
+
+.PHONY : compare.s
+
+# target to generate assembly for a file
+compare.c.s:
+	$(MAKE) -f CMakeFiles/PiscineC.dir/build.make CMakeFiles/PiscineC.dir/compare.c.s
+.PHONY : compare.c.s
+
+generate.o: generate.c.o
+
+.PHONY : generate.o
+
+# target to build an object file
+generate.c.o:
+	$(MAKE) -f CMakeFiles/PiscineC.dir/build.make CMakeFiles/PiscineC.dir/generate.c.o
+.PHONY : generate.c.o
+
+generate.i: generate.c.i
+
+.PHONY : generate.i
+
+# target to preprocess a source file
+generate.c.i:
+	$(MAKE) -f CMakeFiles/PiscineC.dir/build.make CMakeFiles/PiscineC.dir/generate.c.i
+.PHONY : generate.c.i
+
+generate.s: generate.c.s
+
+.PHONY : generate.s
+
+# target to generate assembly for a file
+generate.c.s:
+	$(MAKE) -f CMakeFiles/PiscineC.dir/build.make CMakeFiles/PiscineC.dir/generate.c.s
+.PHONY : generate.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -159,6 +213,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... PiscineC"
 	@echo "... edit_cache"
+	@echo "... compare.o"
+	@echo "... compare.i"
+	@echo "... compare.s"
+	@echo "... generate.o"
+	@echo "... generate.i"
+	@echo "... generate.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
