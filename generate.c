@@ -3,38 +3,6 @@
 //
 #include "generate.h"
 
-struct Tag *createTag() {
-    struct Tag *newTag = malloc(sizeof(Tag));
-
-    newTag->startTag = malloc(sizeof(char) * 100);
-    strcpy(newTag->startTag, "<student type='boy'>");
-    newTag->endTag = malloc(sizeof(char) * 100);
-    strcpy(newTag->endTag, "</student>");
-    newTag->content = malloc(sizeof(char) * 100);
-    strcpy(newTag->content, "Jean");
-    newTag->childTags =  NULL; //no child tag for this one
-    newTag->childsAmount = 0;
-
-    return newTag;
-}
-
-struct DtdTag *createDtdTag() {
-    struct DtdTag *newDtdTag = malloc(sizeof(Tag));
-
-    newDtdTag->tagName = malloc(sizeof(char) * 100);
-    strcpy(newDtdTag->tagName, "student");
-
-    newDtdTag->contentType = malloc(sizeof(char) * 100);
-    strcpy(newDtdTag->contentType, "#PCDATA");
-
-    newDtdTag->childTags = NULL;
-    newDtdTag->childsAmount = 0;
-
-    newDtdTag->attributs = createAttrList(1);
-
-    return newDtdTag;
-}
-
 struct DtdAttr *createDtdAttr(char *name, char ** values, int valuesSize, char * type) {
     struct DtdAttr *newDtdAttr = malloc(sizeof(DtdAttr));
 
@@ -62,7 +30,7 @@ struct DtdAttr *createDtdAttr(char *name, char ** values, int valuesSize, char *
     return newDtdAttr;
 }
 
-struct DtdAttr ** createAttrList(int nbAttr) {
+struct DtdAttr ** createDtdAttrList(int nbAttr) {
 
     struct DtdAttr **attrList = malloc(sizeof(DtdAttr) * nbAttr);
 
@@ -70,4 +38,44 @@ struct DtdAttr ** createAttrList(int nbAttr) {
 
     return attrList;
 }
+
+struct Tag * createTag(char * start, struct Attr ** attrList, int attrAmount, char * content, char * end) {
+    struct Tag * newTag = malloc(sizeof(Tag));
+
+    newTag->start = malloc(sizeof(char) * strlen(start));
+    strcpy(newTag->start, start);
+
+    newTag->attributsAmount = attrAmount;
+    newTag->attributs = attrList;
+
+    newTag->content = malloc(sizeof(char) * strlen(content));
+    strcpy(newTag->content, content);
+
+    newTag->end = malloc(sizeof(char) * strlen(end));
+    strcpy(newTag->end, end);
+
+    return newTag;
+}
+
+struct Attr ** createAttrList(int nbAttr) {
+
+    struct Attr **attrList = malloc(sizeof(Attr) * nbAttr);
+
+    attrList[0] = createAttr("name", "Charles");
+    attrList[1] = createAttr("name", "Jack");
+
+    return attrList;
+}
+
+struct Attr *createAttr(char* name, char* value) {
+    struct Attr * newAttr = malloc(sizeof(Attr));
+
+    newAttr->name = malloc(sizeof(char) * strlen(name));
+    strcpy(newAttr->name, name);
+    newAttr->value = malloc(sizeof(char) * strlen(value));
+    strcpy(newAttr->value, value);
+
+    return newAttr;
+}
+
 

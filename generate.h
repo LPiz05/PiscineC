@@ -9,9 +9,11 @@
 #include <string.h>
 
 struct Tag {
-    char * startTag;
-    char * endTag;
+    char * start;
+    struct Attr ** attributs;
+    int attributsAmount;
     char * content;
+    char * end;
     struct Tag ** childTags; //array of child tag structs
     int childsAmount;
 } Tag;
@@ -19,9 +21,11 @@ struct Tag {
 struct DtdTag {
     char * tagName;
     struct DtdAttr ** attributs;
+    int attributsAmount;
     struct DtdTag ** childTags; //array of child dtdTag structs
     int childsAmount;
     char * contentType;
+    int obligation; //0 or more, 1 and 1 only
 } DtdTag;
 
 struct DtdAttr {
@@ -29,11 +33,20 @@ struct DtdAttr {
     char ** values;
     int valuesSize;
     char * type; //keep empty if values et and define type if no determined values
+    int obligation; //0 or more, 1 need a value cant be empty
+    char * defaultValue;
 } DtdAttr;
 
-struct Tag *createTag();
+struct Attr {
+    char * name;
+    char * value;
+} Attr;
+
+struct Tag *createTag(char * start, struct Attr ** attrList, int AttrAmount, char* content, char *end);
 struct DtdTag *createDtdTag();
 struct DtdAttr *createDtdAttr();
-struct DtdAttr **createAttrList();
+struct Attr *createAttr(char* name, char* value);
+struct DtdAttr **createDtdAttrList();
+struct Attr **createAttrList();
 
 #endif //PISCINEC_GENERATE_H
