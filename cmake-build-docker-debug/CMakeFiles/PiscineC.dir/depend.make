@@ -3,6 +3,7 @@
 
 CMakeFiles/PiscineC.dir/compare.c.o: ../compare.c
 CMakeFiles/PiscineC.dir/compare.c.o: ../compare.h
+CMakeFiles/PiscineC.dir/compare.c.o: ../generate.h
 
 CMakeFiles/PiscineC.dir/generate.c.o: ../generate.c
 CMakeFiles/PiscineC.dir/generate.c.o: ../generate.h
