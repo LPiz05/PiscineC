@@ -3,13 +3,14 @@
 
 int main (int argc, char **argv)
 {
+    ids = malloc(sizeof(Ids));
+    ids->size = 0;
 
-    //struct Tag *tag = createTag(); sigsev ?
-    //struct DtdTag *dtdTag = createDtdTag(); sigsev ?
+    addId("test");
+    addId("test2");
+    addId("haha");
 
-    struct Tag * tag = createTag("student", createAttrList(2), 2, "blabla", "student");
-
-    printf("%d", checkStartName(tag, "student", createDtdAttrList(1), 1));
-
-    return 0;
+    for (int i = 0; i < ids->size; ++i) {
+        printf("%s", ids->ids[i]);
+    }
 }
