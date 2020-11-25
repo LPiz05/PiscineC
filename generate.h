@@ -43,10 +43,10 @@ struct Attr {
 } Attr;
 
 struct Tag *createTag(char * start, struct Attr ** attrList, int AttrAmount, char* content, char *end);
-struct DtdTag *createDtdTag();
-struct DtdAttr *createDtdAttr();
+struct DtdTag *createDtdTag(char *tagName, struct DtdAttr ** dtdAttrList, int dtdAttrAmount, struct DtdTag **childs, int childsAmount, char *contentType, int obligation);
+struct DtdAttr *createDtdAttr(char *name, char ** values, int valuesSize, char * type);
 struct Attr *createAttr(char* name, char* value);
-struct DtdAttr **createDtdAttrList();
+struct DtdAttr **createDtdAttrList(char *tagName);
 struct Attr **createAttrList();
 
 #endif //PISCINEC_GENERATE_H
