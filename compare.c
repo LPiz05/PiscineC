@@ -8,7 +8,10 @@ int compare(struct Tag *tag, struct DtdTag *dtdTag) {
     if (!checkTagName(tag->start, tag->end, dtdTag->tagName)) return 0;
     if (!checkAttributs(tag->attributs, tag->attributsAmount, dtdTag->attributs, dtdTag->attributsAmount)) return 0;
 
-    return compareChilds(tag, dtdTag);
+    if (dtdTag->childsAmount > 0) {
+        return compareChilds(tag, dtdTag);
+    }
+    return 1;
 }
 
 int compareChilds(struct Tag *tag, struct DtdTag *dtdTag) {

@@ -42,7 +42,7 @@ struct Attr {
     char * value;
 } Attr;
 
-struct Tag *createTag(char * start, struct Attr ** attrList, int AttrAmount, char* content, char *end);
+struct Tag *createTag(char * start, struct Attr ** attrList, int AttrAmount, struct Tag **childList, int childAmount, char* content, char *end);
 struct DtdTag *createDtdTag(char *tagName, struct DtdAttr ** dtdAttrList, int dtdAttrAmount, struct DtdTag **childs, int childsAmount, char *contentType, int obligation);
 struct DtdAttr *createDtdAttr(char *name, char ** values, int valuesSize, char * type);
 struct Attr *createAttr(char* name, char* value);

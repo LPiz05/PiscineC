@@ -11,7 +11,7 @@ int main (int argc, char **argv)
     struct Tag **tab = malloc(sizeof(Tag) * ligne);
 
     //init parent because only one level read :'(
-
+    struct Tag *parent = createTag("parent", NULL, 0, tab, 0, "", "parent");
 
     //init dtd because no dtd reader :'(
     struct DtdTag **childList = malloc(sizeof(DtdTag) * 3);
@@ -20,7 +20,5 @@ int main (int argc, char **argv)
     childList[2] = createDtdTag("etrange", createDtdAttrList("etrange"), 1, NULL, 0, "#PCDATA", 1);
     struct DtdTag *dtdParent = createDtdTag("parent", NULL, 0, childList, 3, "#PCDATA", 1);
 
-
-
-    return 0;
+    return compare(parent, dtdParent);
 }

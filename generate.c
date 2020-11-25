@@ -56,7 +56,7 @@ struct DtdAttr ** createDtdAttrList(char * tagName) {
     }
 }
 
-struct Tag * createTag(char * start, struct Attr ** attrList, int attrAmount, char * content, char * end) {
+struct Tag * createTag(char * start, struct Attr ** attrList, int attrAmount, struct Tag **childList, int childAmount, char * content, char * end) {
     struct Tag * newTag = malloc(sizeof(Tag));
 
     newTag->start = malloc(sizeof(char) * strlen(start));
@@ -64,6 +64,9 @@ struct Tag * createTag(char * start, struct Attr ** attrList, int attrAmount, ch
 
     newTag->attributsAmount = attrAmount;
     newTag->attributs = attrList;
+
+    newTag->childTags = childList;
+    newTag->childsAmount = childAmount;
 
     newTag->content = malloc(sizeof(char) * strlen(content));
     strcpy(newTag->content, content);
