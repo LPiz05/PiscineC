@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/tmp/tmp.Jh96LgNawa/compare.c
+compare.h
+/tmp/tmp.Jh96LgNawa/compare.h
+
+/tmp/tmp.Jh96LgNawa/compare.h
+generate.h
+/tmp/tmp.Jh96LgNawa/generate.h
+
+/tmp/tmp.Jh96LgNawa/generate.c
+generate.h
+/tmp/tmp.Jh96LgNawa/generate.h
+
+/tmp/tmp.Jh96LgNawa/generate.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+
+/tmp/tmp.Jh96LgNawa/main.c
+generate.h
+/tmp/tmp.Jh96LgNawa/generate.h
+compare.h
+/tmp/tmp.Jh96LgNawa/compare.h
+

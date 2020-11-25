@@ -1,23 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
-typedef struct Tag Tag;
-typedef struct Attr Attr;
-
-struct Tag{
-    char* start; // balise ouvrante + parametre)
-    char* content;
-    char* close; // balise de fermeture
-    int* childTags ; // adresse de la structure du parent ( question 3)
-    int* childsAmount; //taille du tableau
-    struct Attr ** attributs;
-};
-
-struct Attr {
-    char * name;
-    char * value;
-} ;
+#include "generate.h"
+#include "compare.h"
 
 void fermetureFichier(FILE*);
 void baliseOuvrante(FILE * ,Tag*); // lecture de la balise ouvrante
@@ -217,5 +200,24 @@ int main() {
 
     }
     fermetureFichier(f);
-    return 0;
+  
+  
+    //init ids
+    ids = malloc(sizeof(Ids));
+    ids->size = 0;
+
+    int ligne =0; //voir avec gab
+    struct Tag **tab = malloc(sizeof(Tag) * ligne);
+
+    //init parent because only one level read :'(
+    struct Tag *parent = createTag("parent", NULL, 0, tab, 0, "", "parent");
+
+    //init dtd because no dtd reader :'(
+    struct DtdTag **childList = malloc(sizeof(DtdTag) * 3);
+    childList[0] = createDtdTag("bonjour", createDtdAttrList("bonjour"), 2, NULL, 0, "#PCDATA", 1);
+    childList[1] = createDtdTag("foot", createDtdAttrList("foot"), 1, NULL, 0, "#PCDATA", 1);
+    childList[2] = createDtdTag("etrange", createDtdAttrList("etrange"), 1, NULL, 0, "#PCDATA", 1);
+    struct DtdTag *dtdParent = createDtdTag("parent", NULL, 0, childList, 3, "#PCDATA", 1);
+
+    return compare(parent, dtdParent);
 }
