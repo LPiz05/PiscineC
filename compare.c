@@ -1,11 +1,12 @@
 //
-// Created by louis-keolio on 08/11/2020.
+// Created by louis on 08/11/2020.
 //
 #include "compare.h"
 
 int compare(struct Tag *tag, struct DtdTag *dtdTag) {
 
-    //compare parent
+    if (!checkTagName(tag->start, tag->end, dtdTag->tagName)) return 0;
+    if (!checkAttributs(tag->attributs, tag->attributsAmount, dtdTag->attributs, dtdTag->attributsAmount)) return 0;
 
     return compareChilds(tag, dtdTag);
 }
@@ -40,7 +41,7 @@ int compareChilds(struct Tag *tag, struct DtdTag *dtdTag) {
     }
     if (!find) return 0;
 
-    return 0;
+    return 1;
 }
 
 int checkTagName(char *start, char *end, char *tagName) {
