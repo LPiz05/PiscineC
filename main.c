@@ -22,7 +22,7 @@ int main() {
     }
 
     lectureFichier(f,pointeur);
-    AfficherFichier(pointeur);
+    //AfficherFichier(pointeur);
     char c = ' ';
     //char c = (char)fgetc(f);
     int ligne = 0;
@@ -39,7 +39,7 @@ int main() {
         ligne ++;
         pointeur = &tab[ligne];
         lectureFichier(f,pointeur);
-        AfficherFichier(pointeur);
+        //AfficherFichier(pointeur);
     }
 
     }

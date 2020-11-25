@@ -21,7 +21,7 @@ int compareChilds(struct Tag *tag, struct DtdTag *dtdTag) {
     for (int i = 0; i < tag->childsAmount; ++i) {
         find = 0;
         for (int j = 0; j < dtdTag->childsAmount; ++j) {
-            printf("%s \n", tag->childTags[1]->start);
+            
             if (checkTagName(tag->childTags[i]->start, tag->childTags[i]->end,
                              dtdTag->childTags[j]->tagName)) { //find a corresponding dtd for each child
                 find = 1;

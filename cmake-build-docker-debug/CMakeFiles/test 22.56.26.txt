@@ -1,3 +1,0 @@
-<bonjour prenom=gab question=probleme> ESGI IBC </bonjour>
-	<foot equipe=FCESGI> ligue 1 </foot>
-	<etrange vrai=faux> je ne sais pas </etrange>
