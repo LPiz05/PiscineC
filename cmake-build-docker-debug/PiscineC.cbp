@@ -125,6 +125,12 @@
 		<Unit filename="/tmp/tmp.Jh96LgNawa/main.c">
 			<Option target="PiscineC"/>
 		</Unit>
+		<Unit filename="/tmp/tmp.Jh96LgNawa/readXml.c">
+			<Option target="PiscineC"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.Jh96LgNawa/readXml.h">
+			<Option target="PiscineC"/>
+		</Unit>
 		<Unit filename="/tmp/tmp.Jh96LgNawa/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

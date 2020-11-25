@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/tmp/tmp.Jh96LgNawa/compare.c" "/tmp/tmp.Jh96LgNawa/cmake-build-docker-debug/CMakeFiles/PiscineC.dir/compare.c.o"
   "/tmp/tmp.Jh96LgNawa/generate.c" "/tmp/tmp.Jh96LgNawa/cmake-build-docker-debug/CMakeFiles/PiscineC.dir/generate.c.o"
   "/tmp/tmp.Jh96LgNawa/main.c" "/tmp/tmp.Jh96LgNawa/cmake-build-docker-debug/CMakeFiles/PiscineC.dir/main.c.o"
+  "/tmp/tmp.Jh96LgNawa/readXml.c" "/tmp/tmp.Jh96LgNawa/cmake-build-docker-debug/CMakeFiles/PiscineC.dir/readXml.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

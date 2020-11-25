@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/PiscineC.dir/main.c.o"
   "CMakeFiles/PiscineC.dir/generate.c.o"
   "CMakeFiles/PiscineC.dir/compare.c.o"
+  "CMakeFiles/PiscineC.dir/readXml.c.o"
   "PiscineC.pdb"
   "PiscineC"
 )

@@ -204,6 +204,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/PiscineC.dir/build.make CMakeFiles/PiscineC.dir/main.c.s
 .PHONY : main.c.s
 
+readXml.o: readXml.c.o
+
+.PHONY : readXml.o
+
+# target to build an object file
+readXml.c.o:
+	$(MAKE) -f CMakeFiles/PiscineC.dir/build.make CMakeFiles/PiscineC.dir/readXml.c.o
+.PHONY : readXml.c.o
+
+readXml.i: readXml.c.i
+
+.PHONY : readXml.i
+
+# target to preprocess a source file
+readXml.c.i:
+	$(MAKE) -f CMakeFiles/PiscineC.dir/build.make CMakeFiles/PiscineC.dir/readXml.c.i
+.PHONY : readXml.c.i
+
+readXml.s: readXml.c.s
+
+.PHONY : readXml.s
+
+# target to generate assembly for a file
+readXml.c.s:
+	$(MAKE) -f CMakeFiles/PiscineC.dir/build.make CMakeFiles/PiscineC.dir/readXml.c.s
+.PHONY : readXml.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -222,6 +249,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... readXml.o"
+	@echo "... readXml.i"
+	@echo "... readXml.s"
 .PHONY : help
 
 

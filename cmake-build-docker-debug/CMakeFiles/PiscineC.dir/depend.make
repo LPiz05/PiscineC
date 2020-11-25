@@ -11,4 +11,9 @@ CMakeFiles/PiscineC.dir/generate.c.o: ../generate.h
 CMakeFiles/PiscineC.dir/main.c.o: ../compare.h
 CMakeFiles/PiscineC.dir/main.c.o: ../generate.h
 CMakeFiles/PiscineC.dir/main.c.o: ../main.c
+CMakeFiles/PiscineC.dir/main.c.o: ../readXml.h
+
+CMakeFiles/PiscineC.dir/readXml.c.o: ../generate.h
+CMakeFiles/PiscineC.dir/readXml.c.o: ../readXml.c
+CMakeFiles/PiscineC.dir/readXml.c.o: ../readXml.h
 
