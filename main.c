@@ -160,6 +160,8 @@ void baliseFermante(FILE * f,Tag* tab){;
 
 
 void lectureFichier(FILE* f, Tag *tab){
+tab->childsAmount=0;
+tab->childTags=NULL;
 
     baliseOuvrante(f,tab);
     lecturecontent(f,tab);
