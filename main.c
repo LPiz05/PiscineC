@@ -6,7 +6,7 @@ typedef struct element element;
 typedef struct Attr Attr;
 
 struct element{
-    char* open; // balise ouvrante + parametre)
+    char* open; // balise ouvrante 
     char* content;
     char* close; // balise de fermeture
     int* parent; // adresse de la structure du parent ( question 3)
@@ -24,8 +24,8 @@ void baliseOuvrante(FILE * ,element*); // lecture de la balise ouvrante
 void baliseFermante(FILE * ,element*);
 void lecturecontent(FILE *, element*); // lecture du content entre 2 balises
 void decoupeAttribut(FILE *,char*, element*,int ); // découper le nom attribut et valeur attribut
-void lectureFichier(FILE* , element*); // fonction qui regroupe toute les autre f° de lecture
-void AfficherFichier(element*); // uniquement pour Tester
+void lectureFichier(FILE* , element*); // fonction qui regroupe toute les autres f° de lecture
+void AfficherFichier(element*); 
 
 void fermetureFichier(FILE* f){
     fclose(f);
@@ -34,7 +34,7 @@ void fermetureFichier(FILE* f){
 
 void baliseOuvrante(FILE *f, element *tab){ // detection de la balise ouvrante et stockage du nom de la balise
     char a = (char)fgetc(f);
-    char nomBalise[50]; // variable temporaire de stockage d'information
+    char nomBalise[50];
     int compteur = 0;
     int posedeAtt=0; // 0 si faux, 1 si vrai
     while ( a != '<'){ // recherche balise d'ouverture
@@ -90,7 +90,7 @@ void lecturecontent(FILE *f, element *tab){ // lecture des donnée jusque detect
 
 }
 
-void decoupeAttribut(FILE *f, char *nomBalise ,element *tab, int longeur) {
+void decoupeAttribut(FILE *f, char *nomBalise ,element *tab, int longeur) { // NE FONCTIONNE PAS
     char nomAtt[30];
     char valeurAtt[30];
     int compteur = 0;
@@ -190,9 +190,9 @@ int main() {
     AfficherFichier(pointeur);
     char c = (char)fgetc(f);
     int ligne = 0;
-    while (c != EOF)
+    while (c != EOF) 
     {
-        while ( c  != '\n')
+        while ( c  != '\n') // sup les caractère en trop hors des balises
         {
             c = (char)fgetc(f);
         }
